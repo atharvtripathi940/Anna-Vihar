@@ -1,0 +1,1284 @@
+/* <link rel="stylesheet" href="style.css"> */
+
+/* =========================================
+   ANNA-VIHAR
+   AGRICULTURE MARKETPLACE WEBSITE
+========================================= */
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: #f8f8ef;
+    color: #123d25;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   COLOR VARIABLES
+========================================= */
+
+:root {
+
+    --dark-green: #084522;
+
+    --green: #17883f;
+
+    --light-green: #e9f3d9;
+
+    --very-light-green: #f3f7e9;
+
+    --cream: #faf9ee;
+
+    --white: #ffffff;
+
+    --text: #183d28;
+
+    --gray: #657468;
+
+    --border: #dce5d5;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+
+    height: 74px;
+
+    background: var(--white);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 5%;
+
+    border-bottom: 1px solid #edf0e9;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+}
+
+
+/* Logo */
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.logo-icon {
+
+    width: 40px;
+
+    height: 40px;
+
+    border-radius: 50%;
+
+    background: var(--green);
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 21px;
+}
+
+.logo-text {
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    color: var(--dark-green);
+}
+
+.logo-text span {
+
+    color: var(--green);
+}
+
+
+/* Navigation */
+
+.nav-links {
+
+    display: flex;
+
+    gap: 28px;
+}
+
+.nav-links a {
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #294936;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+
+    color: var(--green);
+}
+
+
+/* Buttons */
+
+.nav-buttons {
+
+    display: flex;
+
+    gap: 10px;
+}
+
+.login-btn {
+
+    padding: 9px 20px;
+
+    border: 1px solid var(--green);
+
+    border-radius: 25px;
+
+    background: white;
+
+    color: var(--green);
+
+    font-weight: 600;
+}
+
+.signup-btn {
+
+    padding: 10px 21px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background: var(--green);
+
+    color: white;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero {
+
+    min-height: 590px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 60px 6%;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(250,249,238,0.98) 0%,
+            rgba(250,249,238,0.93) 30%,
+            rgba(250,249,238,0.45) 55%,
+            rgba(250,249,238,0.05) 80%
+        ),
+
+        url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=2000&q=85");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.hero-content {
+
+    max-width: 590px;
+}
+
+
+/* Brand */
+
+.hero-brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+
+    font-weight: 700;
+
+    font-size: 18px;
+
+    color: var(--dark-green);
+}
+
+.brand-icon {
+
+    width: 38px;
+
+    height: 38px;
+
+    background: var(--green);
+
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* Heading */
+
+.hero h1 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(45px, 5vw, 70px);
+
+    line-height: 1.05;
+
+    color: var(--dark-green);
+
+    margin-bottom: 20px;
+}
+
+
+/* Description */
+
+.hero-description {
+
+    max-width: 510px;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    color: #34523f;
+
+    margin-bottom: 18px;
+}
+
+
+/* Tagline */
+
+.tagline {
+
+    font-family: "Playfair Display", serif;
+
+    font-style: italic;
+
+    font-size: 25px;
+
+    color: var(--green);
+
+    margin-bottom: 30px;
+}
+
+
+/* Hero Buttons */
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 14px;
+}
+
+.primary-btn {
+
+    padding: 14px 26px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: var(--green);
+
+    color: white;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.primary-btn:hover {
+
+    background: var(--dark-green);
+
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+
+    padding: 13px 26px;
+
+    border: 1px solid var(--green);
+
+    border-radius: 30px;
+
+    background: white;
+
+    color: var(--dark-green);
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   COMMON SECTIONS
+========================================= */
+
+.section {
+
+    padding: 80px 6%;
+}
+
+.section-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 35px;
+}
+
+.heading-left h2 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 36px;
+
+    color: var(--dark-green);
+
+    margin-bottom: 7px;
+}
+
+.heading-left p {
+
+    color: var(--gray);
+}
+
+.view-all {
+
+    color: var(--green);
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   MARKETPLACE
+========================================= */
+
+.marketplace {
+
+    background: var(--cream);
+}
+
+.product-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 20px;
+}
+
+.product-card {
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+.product-card:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 35px rgba(25,80,40,0.12);
+}
+
+.product-card img {
+
+    height: 175px;
+
+    object-fit: cover;
+}
+
+.product-content {
+
+    padding: 17px;
+}
+
+.product-content h3 {
+
+    margin-bottom: 7px;
+}
+
+.price {
+
+    color: var(--green);
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    margin-bottom: 5px;
+}
+
+.location {
+
+    color: #7a887e;
+
+    font-size: 13px;
+
+    margin-bottom: 15px;
+}
+
+.buy-button {
+
+    width: 100%;
+
+    padding: 10px;
+
+    border: none;
+
+    border-radius: 20px;
+
+    background: var(--green);
+
+    color: white;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   HOW IT WORKS
+========================================= */
+
+.how-it-works {
+
+    background: var(--very-light-green);
+}
+
+.center-heading {
+
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+.center-heading h2 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 38px;
+
+    color: var(--dark-green);
+
+    margin-bottom: 8px;
+}
+
+.center-heading p {
+
+    color: var(--gray);
+}
+
+.steps {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 35px;
+
+    max-width: 1050px;
+
+    margin: auto;
+}
+
+.step {
+
+    text-align: center;
+}
+
+.step-icon {
+
+    width: 80px;
+
+    height: 80px;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    background: #dfedc7;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 32px;
+}
+
+.step-number {
+
+    width: 28px;
+
+    height: 28px;
+
+    margin: -8px auto 12px;
+
+    background: var(--dark-green);
+
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+.step h3 {
+
+    margin-bottom: 8px;
+}
+
+.step p {
+
+    font-size: 14px;
+
+    color: var(--gray);
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   BENEFITS
+========================================= */
+
+.benefits {
+
+    background: white;
+}
+
+.benefits-container {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.benefits-image {
+
+    height: 500px;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+}
+
+.benefits-content h2 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 40px;
+
+    color: var(--dark-green);
+
+    margin-bottom: 30px;
+}
+
+.benefit {
+
+    display: flex;
+
+    gap: 17px;
+
+    margin-bottom: 25px;
+}
+
+.benefit-icon {
+
+    min-width: 52px;
+
+    height: 52px;
+
+    border-radius: 50%;
+
+    background: var(--light-green);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 23px;
+}
+
+.benefit h3 {
+
+    margin-bottom: 5px;
+}
+
+.benefit p {
+
+    color: var(--gray);
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   IMPACT
+========================================= */
+
+.impact {
+
+    background: var(--dark-green);
+
+    color: white;
+}
+
+.impact .center-heading h2 {
+
+    color: white;
+}
+
+.impact .center-heading p {
+
+    color: #c8d8cb;
+}
+
+.impact-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.impact-card {
+
+    padding: 30px;
+
+    background: rgba(255,255,255,0.08);
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    border-radius: 20px;
+
+    text-align: center;
+}
+
+.impact-card .number {
+
+    font-size: 40px;
+
+    font-weight: 700;
+
+    color: #dff0b9;
+
+    margin-bottom: 5px;
+}
+
+.impact-card p {
+
+    color: #d1ddd3;
+}
+
+
+/* =========================================
+   LOGISTICS
+========================================= */
+
+.logistics-section {
+
+    background: var(--cream);
+}
+
+.logistics-container {
+
+    display: grid;
+
+    grid-template-columns: 1.3fr 1fr;
+
+    gap: 50px;
+
+    align-items: center;
+}
+
+.logistics-image-container {
+
+    position: relative;
+}
+
+.logistics-image {
+
+    height: 430px;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+}
+
+.tracking-card {
+
+    position: absolute;
+
+    right: 25px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 230px;
+
+    padding: 20px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.15);
+}
+
+.tracking-card h3 {
+
+    margin-bottom: 18px;
+}
+
+.tracking-step {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 15px;
+
+    font-size: 13px;
+}
+
+.tracking-step > span {
+
+    width: 20px;
+
+    height: 20px;
+
+    border-radius: 50%;
+
+    background: #e4efd3;
+
+    color: var(--green);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: 700;
+}
+
+.tracking-step strong {
+
+    display: block;
+}
+
+.tracking-step small {
+
+    color: #89938b;
+}
+
+.logistics-content h2 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 42px;
+
+    color: var(--dark-green);
+
+    margin-bottom: 20px;
+}
+
+.logistics-content p {
+
+    color: var(--gray);
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+
+    max-width: 480px;
+}
+
+
+/* =========================================
+   TESTIMONIALS
+========================================= */
+
+.testimonials {
+
+    background: white;
+}
+
+.testimonial-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.testimonial-card {
+
+    border: 1px solid var(--border);
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    background: #fbfcf7;
+}
+
+.person {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 18px;
+}
+
+.avatar {
+
+    width: 48px;
+
+    height: 48px;
+
+    border-radius: 50%;
+
+    background: var(--light-green);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 23px;
+}
+
+.person span {
+
+    font-size: 12px;
+
+    color: var(--gray);
+}
+
+.testimonial-card > p {
+
+    color: #506155;
+
+    line-height: 1.6;
+
+    font-style: italic;
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.cta {
+
+    padding: 65px 6%;
+
+    background: #e7f0d4;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.cta h2 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 42px;
+
+    color: var(--dark-green);
+
+    margin-bottom: 10px;
+}
+
+.cta p {
+
+    color: var(--gray);
+}
+
+.cta-buttons {
+
+    display: flex;
+
+    gap: 12px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+
+    background: #06391d;
+
+    color: white;
+
+    padding: 45px 6% 20px;
+}
+
+.footer-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding-bottom: 30px;
+
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.footer .logo-text {
+
+    color: white;
+}
+
+.footer-brand p {
+
+    margin-top: 12px;
+
+    color: #b7c8bb;
+
+    font-size: 13px;
+}
+
+.footer-links {
+
+    display: flex;
+
+    gap: 22px;
+
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+
+    font-size: 13px;
+
+    color: #d0ddd3;
+}
+
+.socials {
+
+    display: flex;
+
+    gap: 10px;
+}
+
+.socials span {
+
+    width: 34px;
+
+    height: 34px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.1);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 13px;
+}
+
+.footer-bottom {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-top: 20px;
+
+    color: #9fb2a4;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero {
+        min-height: 550px;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
+}
+
+
+@media (max-width: 800px) {
+
+    .navbar {
+        padding: 0 4%;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        padding: 60px 5%;
+
+        background:
+            linear-gradient(
+                90deg,
+                rgba(250,249,238,0.95),
+                rgba(250,249,238,0.75)
+            ),
+            url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80");
+
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: 46px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .benefits-container {
+        grid-template-columns: 1fr;
+    }
+
+    .benefits-image {
+        height: 400px;
+    }
+
+    .impact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .logistics-container {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .footer-top {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .login-btn {
+        display: none;
+    }
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .tagline {
+        font-size: 21px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .impact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .logistics-image {
+        height: 350px;
+    }
+
+    .tracking-card {
+        position: relative;
+
+        right: auto;
+        top: auto;
+
+        transform: none;
+
+        width: 100%;
+
+        margin-top: 20px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .footer-links {
+        flex-direction: column;
+
+        gap: 12px;
+    }
+}
