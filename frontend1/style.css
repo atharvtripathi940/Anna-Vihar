@@ -1,0 +1,1006 @@
+/* =========================================
+   LANDING PAGE
+========================================= */
+
+.landing-page {
+    min-height: 100vh;
+    background: #f5f8f1;
+}
+
+
+.landing-header {
+    height: 75px;
+    padding: 0 7%;
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #e2eadf;
+}
+
+
+.header-text {
+    color: #68776d;
+    font-size: 13px;
+}
+
+
+.landing-container {
+    min-height: calc(100vh - 130px);
+
+    padding: 70px 7%;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1.3fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+.landing-content h1 {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 64px;
+
+    line-height: 1.05;
+
+    margin: 15px 0;
+
+    color: #17351f;
+}
+
+
+.landing-content h1 span {
+    color: #126b3a;
+}
+
+
+.landing-content p {
+
+    color: #68776d;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    max-width: 520px;
+}
+
+
+.login-choice {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 22px;
+}
+
+
+.choice-card {
+
+    background: white;
+
+    padding: 32px;
+
+    border-radius: 22px;
+
+    border: 1px solid #dfe8dd;
+
+    box-shadow:
+        0 15px 40px
+        rgba(25,76,42,.08);
+
+    transition: .25s;
+}
+
+
+.choice-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 25px 55px
+        rgba(25,76,42,.14);
+}
+
+
+.choice-icon {
+
+    width: 65px;
+    height: 65px;
+
+    display: grid;
+    place-items: center;
+
+    font-size: 32px;
+
+    background: #eaf5e7;
+
+    border-radius: 16px;
+
+    margin-bottom: 20px;
+}
+
+
+.choice-card h2 {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 25px;
+
+    margin: 0 0 10px;
+}
+
+
+.choice-card p {
+
+    color: #718077;
+
+    line-height: 1.6;
+
+    min-height: 100px;
+}
+
+
+.choice-btn {
+
+    display: block;
+
+    text-align: center;
+
+    padding: 13px;
+
+    background: #126b3a;
+
+    color: white;
+
+    border-radius: 10px;
+
+    font-weight: 700;
+
+    margin-top: 20px;
+}
+
+
+.choice-btn:hover {
+    background: #084c2a;
+}
+
+
+.landing-footer {
+
+    height: 55px;
+
+    display: grid;
+
+    place-items: center;
+
+    background: #084c2a;
+
+    color: #dceee1;
+
+    font-size: 11px;
+}
+
+
+
+/* =========================================
+   LOGIN PAGES
+========================================= */
+
+.login-page {
+
+    min-height: 100vh;
+
+    background: #f5f8f1;
+}
+
+
+.login-container {
+
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns:
+        1.1fr .9fr;
+}
+
+
+.login-image {
+
+    position: relative;
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+
+.farmer-image {
+
+    background-image:
+
+        linear-gradient(
+            rgba(4,65,30,.55),
+            rgba(4,65,30,.72)
+        ),
+
+        url(
+            "https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=1400&q=85"
+        );
+}
+
+
+.customer-image {
+
+    background-image:
+
+        linear-gradient(
+            rgba(4,65,30,.55),
+            rgba(4,65,30,.72)
+        ),
+
+        url(
+            "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1400&q=85"
+        );
+}
+
+
+.image-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    padding: 55px 9%;
+
+    color: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+.brand-white {
+    color: white;
+}
+
+
+.white {
+    color: #dff2df;
+}
+
+
+.image-overlay h1 {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 62px;
+
+    line-height: 1.05;
+
+    margin: 18px 0;
+}
+
+
+.image-overlay p {
+
+    max-width: 500px;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    color: #edf7ed;
+}
+
+
+.login-box {
+
+    background: white;
+
+    padding: 60px 11%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+.back-link {
+
+    position: absolute;
+
+    top: 30px;
+
+    right: 35px;
+
+    font-size: 13px;
+}
+
+
+.login-logo {
+
+    width: 60px;
+    height: 60px;
+
+    display: grid;
+
+    place-items: center;
+
+    font-size: 30px;
+
+    background: #e9f5e6;
+
+    border-radius: 15px;
+
+    margin-bottom: 25px;
+}
+
+
+.login-box h2 {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 38px;
+
+    margin: 10px 0;
+}
+
+
+.login-subtitle {
+
+    color: #718077;
+
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+}
+
+
+.login-box form label {
+
+    display: block;
+
+    margin: 17px 0 8px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+.login-box input {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border:
+        1px solid
+        #d7e1d5;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    background: #fbfdf9;
+}
+
+
+.login-box input:focus {
+
+    border-color: #126b3a;
+
+    box-shadow:
+        0 0 0 3px
+        #e9f5e6;
+}
+
+
+.login-options {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin: 18px 0;
+
+    font-size: 12px;
+}
+
+
+.remember {
+
+    display: flex;
+
+    gap: 6px;
+
+    align-items: center;
+}
+
+
+.remember input {
+
+    width: auto;
+}
+
+
+.login-btn {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #126b3a;
+
+    color: white;
+
+    font-weight: 700;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+
+.login-btn:hover {
+    background: #084c2a;
+}
+
+
+.register-text {
+
+    text-align: center;
+
+    color: #718077;
+
+    font-size: 13px;
+
+    margin-top: 25px;
+}
+
+
+
+/* =========================================
+   DASHBOARD
+========================================= */
+
+.dashboard-layout {
+
+    display: flex;
+
+    min-height: 100vh;
+
+}
+
+
+.dashboard-main {
+
+    margin-left: 245px;
+
+    width:
+        calc(100% - 245px);
+
+    padding: 35px 5%;
+}
+
+
+.dashboard-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+
+.dashboard-header h1 {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 34px;
+
+    margin: 5px 0;
+}
+
+
+.user-type {
+
+    background:
+        rgba(255,255,255,.12);
+
+    padding: 10px;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+
+    margin-bottom: 25px;
+}
+
+
+.dashboard-header .profile {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.profile-avatar {
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: #dcefd8;
+
+    color: #126b3a;
+
+    display: grid;
+
+    place-items: center;
+
+    font-weight: 800;
+}
+
+
+.profile small {
+
+    display: block;
+
+    color: #718077;
+
+    margin-top: 3px;
+}
+
+
+.dashboard-stats {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+
+.dashboard-stat {
+
+    background: white;
+
+    border: 1px solid #dfe8dd;
+
+    border-radius: 14px;
+
+    padding: 20px;
+}
+
+
+.dashboard-stat span {
+
+    color: #718077;
+
+    font-size: 12px;
+}
+
+
+.dashboard-stat strong {
+
+    display: block;
+
+    font-size: 27px;
+
+    margin: 8px 0;
+}
+
+
+.dashboard-stat small {
+
+    color: #5e8b68;
+}
+
+
+.farmer-hero {
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            110deg,
+            #e3f2dc,
+            #f8fbf1
+        );
+
+    border: 1px solid #d8e9d2;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 35px;
+}
+
+
+.farmer-hero h2 {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 32px;
+
+    margin: 8px 0;
+}
+
+
+.farmer-hero h2 em {
+
+    color: #126b3a;
+
+    font-style: normal;
+}
+
+
+.farmer-hero p {
+
+    color: #68776d;
+
+    max-width: 600px;
+
+    line-height: 1.6;
+}
+
+
+.big-icon {
+
+    font-size: 90px;
+}
+
+
+.dashboard-btn {
+
+    background: #126b3a;
+
+    border: none;
+
+    color: white;
+
+    padding: 13px 20px;
+
+    border-radius: 9px;
+
+    font-weight: 700;
+}
+
+
+.section-title {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+
+    margin: 30px 0 15px;
+}
+
+
+.section-title h2 {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    margin: 5px 0;
+
+    font-size: 25px;
+}
+
+
+.forecast {
+
+    background: #e7f3e3;
+
+    color: #126b3a;
+
+    padding: 8px 13px;
+
+    border-radius: 30px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+.forecast-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+
+.forecast-card {
+
+    background: white;
+
+    padding: 20px;
+
+    border:
+        1px solid
+        #dfe8dd;
+
+    border-radius: 14px;
+}
+
+
+.forecast-card h3 {
+
+    margin-top: 0;
+}
+
+
+.forecast-card strong {
+
+    display: block;
+
+    color: #126b3a;
+
+    font-size: 24px;
+
+    margin-top: 15px;
+}
+
+
+.forecast-card p {
+
+    color: #718077;
+
+    font-size: 13px;
+}
+
+
+.progress {
+
+    height: 7px;
+
+    background: #e6eee3;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+
+.progress div {
+
+    height: 100%;
+
+    background: #126b3a;
+}
+
+
+.orders-table {
+
+    background: white;
+
+    border:
+        1px solid
+        #dfe8dd;
+
+    border-radius: 14px;
+
+    overflow: auto;
+}
+
+
+.orders-table table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+
+.orders-table th,
+.orders-table td {
+
+    padding: 15px;
+
+    text-align: left;
+
+    border-bottom:
+        1px solid
+        #edf1eb;
+
+    font-size: 13px;
+}
+
+
+.orders-table th {
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    color: #718077;
+}
+
+
+.status {
+
+    padding: 5px 10px;
+
+    border-radius: 30px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+.status.new {
+
+    background: #fff0d9;
+
+    color: #9b681b;
+}
+
+
+.status.ready {
+
+    background: #e4f4e1;
+
+    color: #24733d;
+}
+
+
+.status.transit {
+
+    background: #e6f0f7;
+
+    color: #31657d;
+}
+
+
+
+/* CUSTOMER MARKETPLACE */
+
+.product-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+
+.market-product {
+
+    background: white;
+
+    padding: 10px;
+
+    border:
+        1px solid
+        #dfe8dd;
+
+    border-radius: 14px;
+}
+
+
+.market-image {
+
+    height: 140px;
+
+    display: grid;
+
+    place-items: center;
+
+    background: #edf6e9;
+
+    border-radius: 10px;
+
+    font-size: 60px;
+}
+
+
+.market-product h3 {
+
+    margin:
+        12px 5px
+        3px;
+}
+
+
+.market-product p {
+
+    margin:
+        0 5px 12px;
+
+    color: #718077;
+
+    font-size: 12px;
+}
+
+
+.product-bottom {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 5px;
+}
+
+
+.product-bottom button {
+
+    border: none;
+
+    background: #126b3a;
+
+    color: white;
+
+    padding: 8px 12px;
+
+    border-radius: 7px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}

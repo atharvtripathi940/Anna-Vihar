@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Anna-Vihar Farmer and FPO Dashboard"
+    >
+
+    <title>Anna-Vihar | Farmer Dashboard</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="farmer-dashboard.css">
+</head>
+
+
+<body class="dashboard-page">
+
+
+<div class="dashboard-layout">
+
+
+    <!-- =========================================
+         SIDEBAR
+    ========================================== -->
+
+    <aside class="sidebar">
+
+        <!-- Logo -->
+        <div class="sidebar-brand">
+
+            <div class="brand-icon">
+                🌱
+            </div>
+
+            <div>
+                <h2>Anna-Vihar</h2>
+
+                <span>
+                    Farmer Platform
+                </span>
+            </div>
+
+        </div>
+
+
+        <!-- Farmer profile -->
+        <div class="sidebar-profile">
+
+            <div class="sidebar-avatar">
+                RP
+            </div>
+
+            <div>
+
+                <strong>
+                    Ramesh Patel
+                </strong>
+
+                <span>
+                    Farmer / FPO
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Navigation -->
+        <nav class="sidebar-nav">
+
+            <p class="nav-heading">
+                MAIN MENU
+            </p>
+
+
+            <a
+                href="#dashboard"
+                class="nav-link active"
+                data-section="dashboard"
+            >
+
+                <span class="nav-icon">
+                    🏠
+                </span>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a
+                href="#produce"
+                class="nav-link"
+                data-section="produce"
+            >
+
+                <span class="nav-icon">
+                    🌾
+                </span>
+
+                <span>
+                    My Produce
+                </span>
+
+                <span class="nav-count">
+                    7
+                </span>
+
+            </a>
+
+
+            <a
+                href="#orders"
+                class="nav-link"
+                data-section="orders"
+            >
+
+                <span class="nav-icon">
+                    📦
+                </span>
+
+                <span>
+                    Orders
+                </span>
+
+                <span class="nav-count alert">
+                    18
+                </span>
+
+            </a>
+
+
+            <a
+                href="#forecast"
+                class="nav-link"
+                data-section="forecast"
+            >
+
+                <span class="nav-icon">
+                    📈
+                </span>
+
+                <span>
+                    Demand Forecast
+                </span>
+
+            </a>
+
+
+            <a
+                href="#logistics"
+                class="nav-link"
+                data-section="logistics"
+            >
+
+                <span class="nav-icon">
+                    🚚
+                </span>
+
+                <span>
+                    Logistics
+                </span>
+
+            </a>
+
+
+            <a
+                href="#payments"
+                class="nav-link"
+                data-section="payments"
+            >
+
+                <span class="nav-icon">
+                    💰
+                </span>
+
+                <span>
+                    Payments
+                </span>
+
+            </a>
+
+
+            <p class="nav-heading nav-heading-bottom">
+                ACCOUNT
+            </p>
+
+
+            <a
+                href="#settings"
+                class="nav-link"
+            >
+
+                <span class="nav-icon">
+                    ⚙️
+                </span>
+
+                <span>
+                    Settings
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- Sidebar bottom -->
+        <div class="sidebar-bottom">
+
+            <div class="help-card">
+
+                <div class="help-icon">
+                    💬
+                </div>
+
+                <div>
+
+                    <strong>
+                        Need help?
+                    </strong>
+
+                    <span>
+                        Talk to Anna-Vihar support
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="logout-btn"
+                onclick="logout()"
+            >
+
+                <span>
+                    ↪
+                </span>
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =========================================
+         MAIN CONTENT
+    ========================================== -->
+
+    <main class="dashboard-main">
+
+
+        <!-- =====================================
+             TOP HEADER
+        ====================================== -->
+
+        <header class="dashboard-header">
+
+            <div class="header-left">
+
+                <button
+                    type="button"
+                    class="mobile-menu-btn"
+                    id="mobileMenuBtn"
+                    aria-label="Open menu"
+                >
+                    ☰
+                </button>
+
+
+                <div>
+
+                    <span class="eyebrow">
+                        FARMER / FPO PORTAL
+                    </span>
+
+                    <h1>
+                        Good morning, Ramesh 👋
+                    </h1>
+
+                    <p class="header-subtitle">
+                        Here's what's happening with your farm today.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="header-right">
+
+
+                <!-- Notification -->
+                <button
+                    type="button"
+                    class="notification-btn"
+                    id="notificationBtn"
+                    aria-label="Notifications"
+                >
+
+                    🔔
+
+                    <span class="notification-dot"></span>
+
+                </button>
+
+
+                <!-- Profile -->
+                <button
+                    type="button"
+                    class="profile"
+                    id="profileBtn"
+                >
+
+                    <div class="profile-avatar">
+                        RP
+                    </div>
+
+                    <div class="profile-info">
+
+                        <strong>
+                            Ramesh Patel
+                        </strong>
+
+                        <small>
+                            Farmer · Nashik
+                        </small>
+
+                    </div>
+
+                    <span class="profile-arrow">
+                        ▼
+                    </span>
+
+                </button>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =====================================
+             WELCOME BANNER
+        ====================================== -->
+
+        <section class="welcome-banner">
+
+            <div class="welcome-content">
+
+                <span class="welcome-label">
+                    🌱 ANNA-VIHAR MARKET
+                </span>
+
+                <h2>
+                    Grow more.
+                    <br>
+                    <em>Earn better.</em>
+                </h2>
+
+                <p>
+                    Connect directly with verified buyers,
+                    understand market demand and get better
+                    prices for your harvest.
+                </p>
+
+
+                <div class="welcome-actions">
+
+                    <button
+                        type="button"
+                        class="primary-btn"
+                        id="addProduceBtn"
+                    >
+                        <span>+</span>
+                        Add Produce
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="secondary-btn"
+                        id="marketBtn"
+                    >
+                        View Market
+                        <span>→</span>
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="welcome-visual">
+
+                <div class="sun-circle"></div>
+
+                <div class="farmer-illustration">
+                    👨‍🌾
+                </div>
+
+                <div class="floating-card demand-floating">
+
+                    <div class="floating-icon">
+                        📈
+                    </div>
+
+                    <div>
+
+                        <small>
+                            Market demand
+                        </small>
+
+                        <strong>
+                            +24%
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="floating-card price-floating">
+
+                    <div class="floating-icon">
+                        💰
+                    </div>
+
+                    <div>
+
+                        <small>
+                            Your price
+                        </small>
+
+                        <strong>
+                            +18%
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             STATISTICS
+        ====================================== -->
+
+        <section class="dashboard-stats">
+
+
+            <article class="stat-card">
+
+                <div class="stat-top">
+
+                    <div class="stat-icon green">
+                        🌾
+                    </div>
+
+                    <span class="stat-trend positive">
+                        +2
+                    </span>
+
+                </div>
+
+                <span class="stat-label">
+                    Active Listings
+                </span>
+
+                <strong class="stat-value">
+                    7
+                </strong>
+
+                <p>
+                    Products currently listed
+                </p>
+
+            </article>
+
+
+            <article class="stat-card">
+
+                <div class="stat-top">
+
+                    <div class="stat-icon orange">
+                        📦
+                    </div>
+
+                    <span class="stat-trend warning">
+                        5 new
+                    </span>
+
+                </div>
+
+                <span class="stat-label">
+                    Pending Orders
+                </span>
+
+                <strong class="stat-value">
+                    18
+                </strong>
+
+                <p>
+                    Orders need attention
+                </p>
+
+            </article>
+
+
+            <article class="stat-card">
+
+                <div class="stat-top">
+
+                    <div class="stat-icon blue">
+                        💰
+                    </div>
+
+                    <span class="stat-trend positive">
+                        ↑ 14%
+                    </span>
+
+                </div>
+
+                <span class="stat-label">
+                    This Month Sales
+                </span>
+
+                <strong class="stat-value">
+                    ₹86.4K
+                </strong>
+
+                <p>
+                    Compared to last month
+                </p>
+
+            </article>
+
+
+            <article class="stat-card">
+
+                <div class="stat-top">
+
+                    <div class="stat-icon purple">
+                        📊
+                    </div>
+
+                    <span class="stat-trend positive">
+                        Better
+                    </span>
+
+                </div>
+
+                <span class="stat-label">
+                    Farmer Price
+                </span>
+
+                <strong class="stat-value">
+                    +18%
+                </strong>
+
+                <p>
+                    Vs traditional route
+                </p>
+
+            </article>
+
+
+        </section>
+
+
+
+        <!-- =====================================
+             DEMAND FORECAST
+        ====================================== -->
+
+        <section
+            class="dashboard-section"
+            id="forecast"
+        >
+
+            <div class="section-title">
+
+                <div>
+
+                    <span class="eyebrow">
+                        MARKET INTELLIGENCE
+                    </span>
+
+                    <h2>
+                        Demand Forecast
+                    </h2>
+
+                    <p>
+                        Know what buyers are looking for next.
+                    </p>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="view-link"
+                    id="forecastBtn"
+                >
+                    View full forecast →
+                </button>
+
+            </div>
+
+
+            <div class="forecast-grid">
+
+
+                <!-- Tomato -->
+                <article class="forecast-card high-demand">
+
+                    <div class="forecast-header">
+
+                        <div class="produce-icon tomato">
+                            🍅
+                        </div>
+
+                        <span class="demand-badge high">
+                            High demand
+                        </span>
+
+                    </div>
+
+
+                    <div class="forecast-info">
+
+                        <div>
+
+                            <h3>
+                                Tomato
+                            </h3>
+
+                            <p>
+                                Expected increase
+                            </p>
+
+                        </div>
+
+                        <strong>
+                            +24%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="progress">
+
+                        <div
+                            class="progress-bar"
+                            style="width: 82%"
+                        ></div>
+
+                    </div>
+
+
+                    <div class="forecast-footer">
+
+                        <span>
+                            Demand score
+                        </span>
+
+                        <strong>
+                            82/100
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Potato -->
+                <article class="forecast-card">
+
+                    <div class="forecast-header">
+
+                        <div class="produce-icon potato">
+                            🥔
+                        </div>
+
+                        <span class="demand-badge stable">
+                            Stable
+                        </span>
+
+                    </div>
+
+
+                    <div class="forecast-info">
+
+                        <div>
+
+                            <h3>
+                                Potato
+                            </h3>
+
+                            <p>
+                                Expected increase
+                            </p>
+
+                        </div>
+
+                        <strong>
+                            +8%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="progress">
+
+                        <div
+                            class="progress-bar"
+                            style="width: 62%"
+                        ></div>
+
+                    </div>
+
+
+                    <div class="forecast-footer">
+
+                        <span>
+                            Demand score
+                        </span>
+
+                        <strong>
+                            62/100
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Onion -->
+                <article class="forecast-card">
+
+                    <div class="forecast-header">
+
+                        <div class="produce-icon onion">
+                            🧅
+                        </div>
+
+                        <span class="demand-badge growing">
+                            Growing
+                        </span>
+
+                    </div>
+
+
+                    <div class="forecast-info">
+
+                        <div>
+
+                            <h3>
+                                Onion
+                            </h3>
+
+                            <p>
+                                Expected increase
+                            </p>
+
+                        </div>
+
+                        <strong>
+                            +16%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="progress">
+
+                        <div
+                            class="progress-bar"
+                            style="width: 72%"
+                        ></div>
+
+                    </div>
+
+
+                    <div class="forecast-footer">
+
+                        <span>
+                            Demand score
+                        </span>
+
+                        <strong>
+                            72/100
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             ORDERS
+        ====================================== -->
+
+        <section
+            class="dashboard-section"
+            id="orders"
+        >
+
+            <div class="section-title">
+
+                <div>
+
+                    <span class="eyebrow">
+                        ORDER MANAGEMENT
+                    </span>
+
+                    <h2>
+                        Recent Buyer Orders
+                    </h2>
+
+                    <p>
+                        Keep track of your latest sales.
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="view-link"
+                    id="viewOrdersBtn"
+                >
+                    View all orders →
+                </button>
+
+            </div>
+
+
+            <div class="orders-card">
+
+                <div class="orders-table-wrapper">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    ORDER
+                                </th>
+
+                                <th>
+                                    BUYER
+                                </th>
+
+                                <th>
+                                    PRODUCE
+                                </th>
+
+                                <th>
+                                    QUANTITY
+                                </th>
+
+                                <th>
+                                    AMOUNT
+                                </th>
+
+                                <th>
+                                    STATUS
+                                </th>
+
+                                <th>
+                                    ACTION
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+
+                            <!-- Order 1 -->
+
+                            <tr>
+
+                                <td>
+                                    <strong>
+                                        #AV2081
+                                    </strong>
+                                </td>
+
+                                <td>
+
+                                    <div class="buyer">
+
+                                        <div class="buyer-avatar">
+                                            F
+                                        </div>
+
+                                        <span>
+                                            FreshMart
+                                        </span>
+
+                                    </div>
+
+                                </td>
+
+                                <td>
+                                    🍅 Tomato
+                                </td>
+
+                                <td>
+                                    150 kg
+                                </td>
+
+                                <td>
+                                    <strong>
+                                        ₹3,000
+                                    </strong>
+                                </td>
+
+                                <td>
+
+                                    <span class="status new">
+                                        <i></i>
+                                        New
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <button
+                                        type="button"
+                                        class="table-action"
+                                    >
+                                        View
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- Order 2 -->
+
+                            <tr>
+
+                                <td>
+                                    <strong>
+                                        #AV2078
+                                    </strong>
+                                </td>
+
+                                <td>
+
+                                    <div class="buyer">
+
+                                        <div class="buyer-avatar green">
+                                            G
+                                        </div>
+
+                                        <span>
+                                            Green Basket
+                                        </span>
+
+                                    </div>
+
+                                </td>
+
+                                <td>
+                                    🧅 Onion
+                                </td>
+
+                                <td>
+                                    100 kg
+                                </td>
+
+                                <td>
+                                    <strong>
+                                        ₹2,200
+                                    </strong>
+                                </td>
+
+                                <td>
+
+                                    <span class="status ready">
+                                        <i></i>
+                                        Ready
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <button
+                                        type="button"
+                                        class="table-action"
+                                    >
+                                        View
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- Order 3 -->
+
+                            <tr>
+
+                                <td>
+                                    <strong>
+                                        #AV2071
+                                    </strong>
+                                </td>
+
+                                <td>
+
+                                    <div class="buyer">
+
+                                        <div class="buyer-avatar blue">
+                                            C
+                                        </div>
+
+                                        <span>
+                                            City Foods
+                                        </span>
+
+                                    </div>
+
+                                </td>
+
+                                <td>
+                                    🥔 Potato
+                                </td>
+
+                                <td>
+                                    250 kg
+                                </td>
+
+                                <td>
+                                    <strong>
+                                        ₹4,500
+                                    </strong>
+                                </td>
+
+                                <td>
+
+                                    <span class="status transit">
+                                        <i></i>
+                                        In Transit
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <button
+                                        type="button"
+                                        class="table-action"
+                                    >
+                                        Track
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             QUICK ACTIONS
+        ====================================== -->
+
+        <section class="quick-section">
+
+            <div class="section-title">
+
+                <div>
+
+                    <span class="eyebrow">
+                        QUICK ACTIONS
+                    </span>
+
+                    <h2>
+                        What would you like to do?
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="quick-grid">
+
+
+                <button
+                    type="button"
+                    class="quick-card"
+                    id="quickProduce"
+                >
+
+                    <span class="quick-icon">
+                        🌾
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            List Produce
+                        </strong>
+
+                        <span>
+                            Add new harvest
+                        </span>
+
+                    </div>
+
+                    <span class="quick-arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="quick-card"
+                    id="quickOrders"
+                >
+
+                    <span class="quick-icon">
+                        📦
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Manage Orders
+                        </strong>
+
+                        <span>
+                            Check pending orders
+                        </span>
+
+                    </div>
+
+                    <span class="quick-arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="quick-card"
+                    id="quickPayments"
+                >
+
+                    <span class="quick-icon">
+                        💰
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Check Payments
+                        </strong>
+
+                        <span>
+                            View your earnings
+                        </span>
+
+                    </div>
+
+                    <span class="quick-arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             FOOTER
+        ====================================== -->
+
+        <footer class="dashboard-footer">
+
+            <div>
+
+                <strong>
+                    🌱 Anna-Vihar
+                </strong>
+
+                <span>
+                    Empowering farmers through direct markets.
+                </span>
+
+            </div>
+
+            <span>
+                © 2026 Anna-Vihar
+            </span>
+
+        </footer>
+
+
+    </main>
+
+</div>
+
+
+
+<!-- =========================================
+     MOBILE OVERLAY
+========================================== -->
+
+<div
+    class="sidebar-overlay"
+    id="sidebarOverlay"
+></div>
+
+
+
+<!-- =========================================
+     JAVASCRIPT
+========================================== -->
+
+<script src="farmer-dashboard.js"></script>
+
+</body>
+
+</html>

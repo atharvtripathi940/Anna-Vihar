@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Customer Dashboard | Anna-Vihar</title>
+
+    <link rel="stylesheet" href="custmer-dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="customer-dashboard-page">
+
+    <div class="customer-dashboard-layout">
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="customer-sidebar">
+
+            <div class="customer-brand">
+                <span>🌱</span>
+                <strong>Anna-Vihar</strong>
+            </div>
+
+            <div class="customer-type">
+                CUSTOMER / BUYER
+            </div>
+
+            <nav class="customer-nav">
+
+                <a href="#" class="active">
+                    <span>⌂</span>
+                    Dashboard
+                </a>
+
+                <a href="#">
+                    <span>🛒</span>
+                    Browse Produce
+                </a>
+
+                <a href="#">
+                    <span>📦</span>
+                    My Orders
+                </a>
+
+                <a href="#">
+                    <span>❤️</span>
+                    Saved Items
+                </a>
+
+                <a href="#">
+                    <span>📍</span>
+                    Deliveries
+                </a>
+
+                <a href="#">
+                    <span>💳</span>
+                    Payments
+                </a>
+
+            </nav>
+
+            <div class="customer-help">
+                <div class="help-icon">?</div>
+
+                <div>
+                    <strong>Need help?</strong>
+                    <small>We're here for you</small>
+                </div>
+            </div>
+
+            <button class="customer-logout-btn" onclick="logoutCustomer()">
+                ↪ Logout
+            </button>
+
+        </aside>
+
+
+        <!-- ================= MAIN ================= -->
+
+        <main class="customer-main">
+
+            <!-- HEADER -->
+
+            <header class="customer-header">
+
+                <div>
+                    <span class="customer-eyebrow">
+                        CUSTOMER / BUYER PORTAL
+                    </span>
+
+                    <h1>
+                        Good morning, Priya 👋
+                    </h1>
+
+                    <p>
+                        Fresh produce directly from trusted farmers.
+                    </p>
+                </div>
+
+                <div class="customer-header-actions">
+
+                    <button class="notification-btn">
+                        🔔
+                        <span></span>
+                    </button>
+
+                    <div class="customer-profile">
+
+                        <div class="customer-avatar">
+                            P
+                        </div>
+
+                        <div>
+                            <strong>Priya Sharma</strong>
+                            <small>Customer · Lucknow</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- ================= SEARCH ================= -->
+
+            <section class="customer-search-section">
+
+                <div class="customer-search">
+
+                    <span>⌕</span>
+
+                    <input
+                        type="text"
+                        placeholder="Search for tomatoes, potatoes, onions..."
+                    >
+
+                    <button>
+                        Search
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= QUICK STATS ================= -->
+
+            <section class="customer-stats">
+
+                <div class="customer-stat-card">
+
+                    <div class="customer-stat-icon green">
+                        🛒
+                    </div>
+
+                    <div>
+                        <span>Active Orders</span>
+                        <strong>3</strong>
+                        <small>Currently processing</small>
+                    </div>
+
+                </div>
+
+
+                <div class="customer-stat-card">
+
+                    <div class="customer-stat-icon orange">
+                        📦
+                    </div>
+
+                    <div>
+                        <span>Orders Completed</span>
+                        <strong>24</strong>
+                        <small>This year</small>
+                    </div>
+
+                </div>
+
+
+                <div class="customer-stat-card">
+
+                    <div class="customer-stat-icon blue">
+                        💰
+                    </div>
+
+                    <div>
+                        <span>Total Saved</span>
+                        <strong>₹2,840</strong>
+                        <small>vs traditional market</small>
+                    </div>
+
+                </div>
+
+
+                <div class="customer-stat-card">
+
+                    <div class="customer-stat-icon purple">
+                        🌱
+                    </div>
+
+                    <div>
+                        <span>Farmer Direct</span>
+                        <strong>100%</strong>
+                        <small>Direct sourcing</small>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= MAIN GRID ================= -->
+
+            <div class="customer-content-grid">
+
+
+                <!-- ================= LEFT ================= -->
+
+                <div class="customer-products-area">
+
+                    <div class="customer-section-header">
+
+                        <div>
+                            <span>FRESH FROM FARM</span>
+                            <h2>Popular today</h2>
+                        </div>
+
+                        <a href="#">
+                            View all →
+                        </a>
+
+                    </div>
+
+
+                    <!-- CATEGORIES -->
+
+                    <div class="customer-categories">
+
+                        <button class="category active">
+                            🥬 All
+                        </button>
+
+                        <button class="category">
+                            🍅 Vegetables
+                        </button>
+
+                        <button class="category">
+                            🍎 Fruits
+                        </button>
+
+                        <button class="category">
+                            🌾 Grains
+                        </button>
+
+                        <button class="category">
+                            🥔 Staples
+                        </button>
+
+                    </div>
+
+
+                    <!-- PRODUCTS -->
+
+                    <div class="customer-product-grid">
+
+
+                        <!-- PRODUCT 1 -->
+
+                        <article class="customer-product-card">
+
+                            <div class="product-image tomato">
+                                🍅
+                            </div>
+
+                            <button class="save-product">
+                                ♡
+                            </button>
+
+                            <div class="product-info">
+
+                                <div class="product-farmer">
+                                    Direct from Nashik Farmer
+                                </div>
+
+                                <h3>
+                                    Fresh Tomatoes
+                                </h3>
+
+                                <p>
+                                    Naturally grown · Grade A
+                                </p>
+
+                                <div class="product-bottom">
+
+                                    <div>
+                                        <strong>₹24</strong>
+                                        <span>/ kg</span>
+                                    </div>
+
+                                    <button class="add-cart">
+                                        + Add
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- PRODUCT 2 -->
+
+                        <article class="customer-product-card">
+
+                            <div class="product-image potato">
+                                🥔
+                            </div>
+
+                            <button class="save-product">
+                                ♡
+                            </button>
+
+                            <div class="product-info">
+
+                                <div class="product-farmer">
+                                    Direct from Agra FPO
+                                </div>
+
+                                <h3>
+                                    Fresh Potatoes
+                                </h3>
+
+                                <p>
+                                    Farm fresh · Premium quality
+                                </p>
+
+                                <div class="product-bottom">
+
+                                    <div>
+                                        <strong>₹28</strong>
+                                        <span>/ kg</span>
+                                    </div>
+
+                                    <button class="add-cart">
+                                        + Add
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- PRODUCT 3 -->
+
+                        <article class="customer-product-card">
+
+                            <div class="product-image onion">
+                                🧅
+                            </div>
+
+                            <button class="save-product">
+                                ♡
+                            </button>
+
+                            <div class="product-info">
+
+                                <div class="product-farmer">
+                                    Direct from Maharashtra FPO
+                                </div>
+
+                                <h3>
+                                    Red Onions
+                                </h3>
+
+                                <p>
+                                    Fresh harvest · Medium size
+                                </p>
+
+                                <div class="product-bottom">
+
+                                    <div>
+                                        <strong>₹22</strong>
+                                        <span>/ kg</span>
+                                    </div>
+
+                                    <button class="add-cart">
+                                        + Add
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- PRODUCT 4 -->
+
+                        <article class="customer-product-card">
+
+                            <div class="product-image mango">
+                                🥭
+                            </div>
+
+                            <button class="save-product">
+                                ♡
+                            </button>
+
+                            <div class="product-info">
+
+                                <div class="product-farmer">
+                                    Direct from UP Farmer
+                                </div>
+
+                                <h3>
+                                    Seasonal Mangoes
+                                </h3>
+
+                                <p>
+                                    Naturally ripened · Sweet
+                                </p>
+
+                                <div class="product-bottom">
+
+                                    <div>
+                                        <strong>₹85</strong>
+                                        <span>/ kg</span>
+                                    </div>
+
+                                    <button class="add-cart">
+                                        + Add
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= RIGHT PANEL ================= -->
+
+                <aside class="customer-side-panel">
+
+
+                    <!-- CART -->
+
+                    <div class="customer-cart-card">
+
+                        <div class="cart-header">
+
+                            <div>
+                                <span>YOUR CART</span>
+                                <h2>3 items</h2>
+                            </div>
+
+                            <div class="cart-icon">
+                                🛒
+                            </div>
+
+                        </div>
+
+
+                        <div class="cart-item">
+
+                            <div class="cart-product-icon">
+                                🍅
+                            </div>
+
+                            <div class="cart-product-details">
+                                <strong>Tomatoes</strong>
+                                <small>2 kg × ₹24</small>
+                            </div>
+
+                            <strong>₹48</strong>
+
+                        </div>
+
+
+                        <div class="cart-item">
+
+                            <div class="cart-product-icon">
+                                🥔
+                            </div>
+
+                            <div class="cart-product-details">
+                                <strong>Potatoes</strong>
+                                <small>2 kg × ₹28</small>
+                            </div>
+
+                            <strong>₹56</strong>
+
+                        </div>
+
+
+                        <div class="cart-item">
+
+                            <div class="cart-product-icon">
+                                🧅
+                            </div>
+
+                            <div class="cart-product-details">
+                                <strong>Onions</strong>
+                                <small>1 kg × ₹22</small>
+                            </div>
+
+                            <strong>₹22</strong>
+
+                        </div>
+
+
+                        <div class="cart-total">
+
+                            <span>Total</span>
+
+                            <strong>
+                                ₹126
+                            </strong>
+
+                        </div>
+
+                        <button class="checkout-btn">
+                            Proceed to Checkout →
+                        </button>
+
+                    </div>
+
+
+                    <!-- SAVINGS -->
+
+                    <div class="customer-savings-card">
+
+                        <div class="savings-icon">
+                            🌱
+                        </div>
+
+                        <div>
+                            <span>YOU'RE SAVING</span>
+
+                            <strong>
+                                ₹18
+                            </strong>
+
+                            <p>
+                                on this order by buying directly from farmers.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <!-- DELIVERY -->
+
+                    <div class="delivery-card">
+
+                        <div class="delivery-header">
+                            <span>📍</span>
+
+                            <div>
+                                <span>DELIVERING TO</span>
+                                <strong>Lucknow, Uttar Pradesh</strong>
+                            </div>
+                        </div>
+
+                        <button>
+                            Change
+                        </button>
+
+                        <div class="delivery-info">
+                            🚚 Estimated delivery: <strong>Tomorrow</strong>
+                        </div>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+
+            <!-- ================= RECENT ORDERS ================= -->
+
+            <section class="customer-orders-section">
+
+                <div class="customer-section-header">
+
+                    <div>
+                        <span>ORDER ACTIVITY</span>
+                        <h2>Recent orders</h2>
+                    </div>
+
+                    <a href="#">
+                        View all orders →
+                    </a>
+
+                </div>
+
+
+                <div class="customer-orders-table">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>ORDER</th>
+                                <th>ITEMS</th>
+                                <th>AMOUNT</th>
+                                <th>DELIVERY</th>
+                                <th>STATUS</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>
+                                    <strong>#AV-2451</strong>
+                                    <small>Oct 5, 2026</small>
+                                </td>
+
+                                <td>
+                                    Tomatoes, Onions
+                                </td>
+
+                                <td>
+                                    <strong>₹184</strong>
+                                </td>
+
+                                <td>
+                                    Tomorrow
+                                </td>
+
+                                <td>
+                                    <span class="customer-status processing">
+                                        Processing
+                                    </span>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <strong>#AV-2398</strong>
+                                    <small>Oct 2, 2026</small>
+                                </td>
+
+                                <td>
+                                    Potatoes, Mangoes
+                                </td>
+
+                                <td>
+                                    <strong>₹342</strong>
+                                </td>
+
+                                <td>
+                                    Delivered
+                                </td>
+
+                                <td>
+                                    <span class="customer-status delivered">
+                                        Delivered
+                                    </span>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <strong>#AV-2312</strong>
+                                    <small>Sep 28, 2026</small>
+                                </td>
+
+                                <td>
+                                    Fresh Vegetables
+                                </td>
+
+                                <td>
+                                    <strong>₹268</strong>
+                                </td>
+
+                                <td>
+                                    Delivered
+                                </td>
+
+                                <td>
+                                    <span class="customer-status delivered">
+                                        Delivered
+                                    </span>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="customer-dashboard.js"></script>
+
+</body>
+</html>

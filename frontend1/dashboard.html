@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Anna-Vihar | Dashboard
+    </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body class="dashboard-page">
+
+<div class="app">
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <span class="leaf">
+                ❧
+            </span>
+
+            Anna-Vihar
+
+        </div>
+
+
+        <div
+            class="role-chip"
+            id="roleChip"
+        >
+        </div>
+
+
+        <nav id="sideNav">
+        </nav>
+
+
+        <button
+            id="logoutBtn"
+            class="logout"
+        >
+            ↪ Logout
+        </button>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main">
+
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div>
+
+                <span class="eyebrow">
+                    ANNA-VIHAR
+                </span>
+
+                <h1 id="welcomeTitle">
+                    Dashboard
+                </h1>
+
+            </div>
+
+
+            <div class="profile">
+
+                <div
+                    class="avatar"
+                    id="avatar"
+                >
+                    A
+                </div>
+
+                <div>
+
+                    <strong id="profileName">
+                        Demo User
+                    </strong>
+
+                    <small id="profileRole">
+                        Customer
+                    </small>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ================================= -->
+        <!-- CUSTOMER DASHBOARD -->
+        <!-- ================================= -->
+
+        <section
+            id="customerDashboard"
+            class="dashboard-content hidden"
+        >
+
+            <!-- HERO -->
+
+            <div class="hero-banner">
+
+                <div>
+
+                    <span class="eyebrow">
+                        FRESH FROM THE FARM
+                    </span>
+
+                    <h2>
+                        Buy directly.
+                        <em>Pay fairly.</em>
+                    </h2>
+
+                    <p>
+                        Discover fresh produce from verified
+                        farmers and FPOs with transparent prices
+                        and grouped delivery.
+                    </p>
+
+                    <button
+                        class="primary-btn small"
+                        onclick="showSection('marketplace')"
+                    >
+                        Explore Marketplace →
+                    </button>
+
+                </div>
+
+                <div class="hero-icon">
+                    🌾
+                </div>
+
+            </div>
+
+
+
+            <!-- CUSTOMER STATS -->
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <span>
+                        Active Orders
+                    </span>
+
+                    <strong>
+                        3
+                    </strong>
+
+                    <small>
+                        2 arriving this week
+                    </small>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>
+                        Saved Farmers
+                    </span>
+
+                    <strong>
+                        8
+                    </strong>
+
+                    <small>
+                        Verified FPOs
+                    </small>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>
+                        Money Saved
+                    </span>
+
+                    <strong>
+                        ₹1,240
+                    </strong>
+
+                    <small>
+                        vs. local retail
+                    </small>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>
+                        Deliveries
+                    </span>
+
+                    <strong>
+                        12
+                    </strong>
+
+                    <small>
+                        100% fulfilled
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- MARKETPLACE -->
+
+            <div class="section-head">
+
+                <div>
+
+                    <span class="eyebrow">
+                        MARKETPLACE
+                    </span>
+
+                    <h2>
+                        Fresh produce for you
+                    </h2>
+
+                </div>
+
+                <button
+                    class="text-btn"
+                    onclick="showSection('marketplace')"
+                >
+                    View all →
+                </button>
+
+            </div>
+
+
+            <div class="product-grid">
+
+
+                <!-- TOMATO -->
+
+                <article class="product-card">
+
+                    <div class="product-image tomato">
+                        🍅
+                    </div>
+
+                    <h3>
+                        Tomato
+                    </h3>
+
+                    <p>
+                        FPO, Nashik
+                    </p>
+
+                    <div>
+
+                        <strong>
+                            ₹20 / kg
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Tomato')"
+                        >
+                            Buy
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- POTATO -->
+
+                <article class="product-card">
+
+                    <div class="product-image potato">
+                        🥔
+                    </div>
+
+                    <h3>
+                        Potato
+                    </h3>
+
+                    <p>
+                        FPO, Agra
+                    </p>
+
+                    <div>
+
+                        <strong>
+                            ₹18 / kg
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Potato')"
+                        >
+                            Buy
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ONION -->
+
+                <article class="product-card">
+
+                    <div class="product-image onion">
+                        🧅
+                    </div>
+
+                    <h3>
+                        Onion
+                    </h3>
+
+                    <p>
+                        FPO, Pune
+                    </p>
+
+                    <div>
+
+                        <strong>
+                            ₹22 / kg
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Onion')"
+                        >
+                            Buy
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CHILLI -->
+
+                <article class="product-card">
+
+                    <div class="product-image chilli">
+                        🌶️
+                    </div>
+
+                    <h3>
+                        Green Chilli
+                    </h3>
+
+                    <p>
+                        FPO, Guntur
+                    </p>
+
+                    <div>
+
+                        <strong>
+                            ₹40 / kg
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Green Chilli')"
+                        >
+                            Buy
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+
+            <!-- CUSTOMER ORDERS -->
+
+            <div class="section-head">
+
+                <div>
+
+                    <span class="eyebrow">
+                        RECENT ACTIVITY
+                    </span>
+
+                    <h2>
+                        Your orders
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="table-card">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Order</th>
+                            <th>Items</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                #AV1024
+                            </td>
+
+                            <td>
+                                Tomato 10 kg
+                            </td>
+
+                            <td>
+                                ₹200
+                            </td>
+
+                            <td>
+                                <span class="status green">
+                                    In Transit
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                #AV1019
+                            </td>
+
+                            <td>
+                                Potato 20 kg
+                            </td>
+
+                            <td>
+                                ₹360
+                            </td>
+
+                            <td>
+                                <span class="status blue">
+                                    Delivered
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                #AV1014
+                            </td>
+
+                            <td>
+                                Onion 5 kg
+                            </td>
+
+                            <td>
+                                ₹110
+                            </td>
+
+                            <td>
+                                <span class="status orange">
+                                    Processing
+                                </span>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================= -->
+        <!-- FARMER DASHBOARD -->
+        <!-- ================================= -->
+
+        <section
+            id="farmerDashboard"
+            class="dashboard-content hidden"
+        >
+
+            <!-- HERO -->
+
+            <div class="hero-banner farmer-banner">
+
+                <div>
+
+                    <span class="eyebrow">
+                        FARMER / FPO PORTAL
+                    </span>
+
+                    <h2>
+                        Sell more.
+                        <em>Earn fairly.</em>
+                    </h2>
+
+                    <p>
+                        List your harvest, see buyer demand,
+                        manage orders and plan grouped deliveries
+                        from one place.
+                    </p>
+
+                    <button
+                        class="primary-btn small"
+                        onclick="showSection('products')"
+                    >
+                        + Add Produce
+                    </button>
+
+                </div>
+
+                <div class="hero-icon">
+                    👨‍🌾
+                </div>
+
+            </div>
+
+
+
+            <!-- FARMER STATS -->
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <span>
+                        Pending Orders
+                    </span>
+
+                    <strong>
+                        18
+                    </strong>
+
+                    <small>
+                        ₹42,600 total value
+                    </small>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>
+                        Listed Produce
+                    </span>
+
+                    <strong>
+                        7
+                    </strong>
+
+                    <small>
+                        Products active
+                    </small>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>
+                        This Month Sales
+                    </span>
+
+                    <strong>
+                        ₹86.4K
+                    </strong>
+
+                    <small>
+                        ↑ 14% vs last month
+                    </small>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>
+                        Avg. Farmer Price
+                    </span>
+
+                    <strong>
+                        +18%
+                    </strong>
+
+                    <small>
+                        vs. traditional route
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- DEMAND FORECAST -->
+
+            <div class="section-head">
+
+                <div>
+
+                    <span class="eyebrow">
+                        DEMAND FORECAST
+                    </span>
+
+                    <h2>
+                        What buyers will need
+                    </h2>
+
+                </div>
+
+                <span class="forecast-pill">
+                    Next 7 days
+                </span>
+
+            </div>
+
+
+            <div class="forecast-grid">
+
+
+                <div class="forecast-card">
+
+                    <div>
+
+                        <div>
+
+                            <strong>
+                                Tomato
+                            </strong>
+
+                            <small>
+                                High demand
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                    <b>
+                        +24%
+                    </b>
+
+                    <div class="bar">
+                        <i style="width:82%"></i>
+                    </div>
+
+                </div>
+
+
+                <div class="forecast-card">
+
+                    <div>
+
+                        <div>
+
+                            <strong>
+                                Potato
+                            </strong>
+
+                            <small>
+                                Stable demand
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                    <b>
+                        +8%
+                    </b>
+
+                    <div class="bar">
+                        <i style="width:62%"></i>
+                    </div>
+
+                </div>
+
+
+                <div class="forecast-card">
+
+                    <div>
+
+                        <div>
+
+                            <strong>
+                                Onion
+                            </strong>
+
+                            <small>
+                                Growing demand
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                    <b>
+                        +16%
+                    </b>
+
+                    <div class="bar">
+                        <i style="width:72%"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FARMER ORDERS -->
+
+            <div class="section-head">
+
+                <div>
+
+                    <span class="eyebrow">
+                        ORDERS
+                    </span>
+
+                    <h2>
+                        Recent buyer orders
+                    </h2>
+
+                </div>
+
+                <button class="text-btn">
+                    Manage all →
+                </button>
+
+            </div>
+
+
+            <div class="table-card">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Order</th>
+                            <th>Buyer</th>
+                            <th>Produce</th>
+                            <th>Qty.</th>
+                            <th>Value</th>
+                            <th>Status</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                #AV2081
+                            </td>
+
+                            <td>
+                                FreshMart
+                            </td>
+
+                            <td>
+                                Tomato
+                            </td>
+
+                            <td>
+                                150 kg
+                            </td>
+
+                            <td>
+                                ₹3,000
+                            </td>
+
+                            <td>
+                                <span class="status orange">
+                                    New
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                #AV2078
+                            </td>
+
+                            <td>
+                                Green Basket
+                            </td>
+
+                            <td>
+                                Onion
+                            </td>
+
+                            <td>
+                                100 kg
+                            </td>
+
+                            <td>
+                                ₹2,200
+                            </td>
+
+                            <td>
+                                <span class="status green">
+                                    Ready
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                #AV2071
+                            </td>
+
+                            <td>
+                                City Foods
+                            </td>
+
+                            <td>
+                                Potato
+                            </td>
+
+                            <td>
+                                250 kg
+                            </td>
+
+                            <td>
+                                ₹4,500
+                            </td>
+
+                            <td>
+                                <span class="status blue">
+                                    In Transit
+                                </span>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================= -->
+        <!-- MARKETPLACE EXTRA PAGE -->
+        <!-- ================================= -->
+
+        <section
+            id="marketplace"
+            class="extra-section hidden"
+        >
+
+            <div class="section-head">
+
+                <div>
+
+                    <span class="eyebrow">
+                        BUY DIRECT
+                    </span>
+
+                    <h2>
+                        Marketplace
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-panel">
+
+                <h3>
+                    Transparent farm-to-buyer marketplace
+                </h3>
+
+                <p>
+                    Browse verified FPO listings, compare prices,
+                    choose quantities and place grouped orders.
+                    This is the MVP screen — connect it to your
+                    backend/API when ready.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================= -->
+        <!-- FARMER PRODUCTS PAGE -->
+        <!-- ================================= -->
+
+        <section
+            id="products"
+            class="extra-section hidden"
+        >
+
+            <div class="section-head">
+
+                <div>
+
+                    <span class="eyebrow">
+                        YOUR HARVEST
+                    </span>
+
+                    <h2>
+                        Manage Produce
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-panel">
+
+                <h3>
+                    Add a new listing
+                </h3>
+
+
+                <div class="form-grid">
+
+                    <input
+                        placeholder="Produce name"
+                    >
+
+                    <input
+                        placeholder="Price / kg"
+                    >
+
+                    <input
+                        placeholder="Available quantity"
+                    >
+
+                    <button
+                        class="primary-btn"
+                        onclick="alert('Demo listing saved!')"
+                    >
+                        Publish Listing
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

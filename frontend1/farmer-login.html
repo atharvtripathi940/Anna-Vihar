@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Farmer Login | Anna-Vihar</title>
+
+    <link rel="stylesheet" href="farmer-login.css">
+</head>
+
+<body class="auth-page">
+
+    <div class="auth-wrapper">
+
+        <!-- LEFT SIDE -->
+        <section class="auth-visual farmer-visual">
+
+            <div class="visual-overlay">
+
+                <div class="logo white-logo">
+                    🌱 <span>Anna-Vihar</span>
+                </div>
+
+                <div class="visual-content">
+
+                    <span class="small-label">
+                        FARMER & FPO PLATFORM
+                    </span>
+
+                    <h1>
+                        Sell directly.<br>
+                        <span>Earn fairly.</span>
+                    </h1>
+
+                    <p>
+                        Connect directly with buyers, manage your
+                        produce and get better access to the market.
+                    </p>
+
+                    <div class="visual-points">
+
+                        <div>
+                            ✓ Direct access to buyers
+                        </div>
+
+                        <div>
+                            ✓ Transparent pricing
+                        </div>
+
+                        <div>
+                            ✓ Smarter demand insights
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- RIGHT SIDE -->
+        <section class="auth-form-section">
+
+            <div class="auth-form-container">
+
+                <a href="index.html" class="back-link">
+                    ← Back to home
+                </a>
+
+
+                <div class="auth-icon">
+                    👨‍🌾
+                </div>
+
+
+                <span class="form-label">
+                    FARMER / FPO LOGIN
+                </span>
+
+
+                <h2>
+                    Welcome back, Farmer
+                </h2>
+
+
+                <p class="form-description">
+                    Sign in to manage your produce, orders and
+                    market insights.
+                </p>
+
+
+                <form id="farmerLoginForm">
+
+
+                    <!-- MOBILE NUMBER -->
+
+                    <div class="input-group">
+
+                        <label for="farmerMobile">
+                            Mobile Number
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <span class="input-icon">
+                                📱
+                            </span>
+
+                            <input
+                                type="tel"
+                                id="farmerMobile"
+                                placeholder="Enter your 10-digit mobile number"
+                                maxlength="10"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="input-group">
+
+                        <label for="farmerPassword">
+                            Password
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <span class="input-icon">
+                                🔒
+                            </span>
+
+                            <input
+                                type="password"
+                                id="farmerPassword"
+                                placeholder="Enter your password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                onclick="togglePassword('farmerPassword', this)"
+                            >
+                                👁
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- OPTIONS -->
+
+                    <div class="form-options">
+
+                        <label class="checkbox-label">
+
+                            <input type="checkbox">
+
+                            <span>
+                                Remember me
+                            </span>
+
+                        </label>
+
+                        <a href="#">
+                            Forgot password?
+                        </a>
+
+                    </div>
+
+
+                    <!-- LOGIN -->
+
+                    <button
+                        type="submit"
+                        class="primary-btn"
+                    >
+                        Login as Farmer
+                        <span>→</span>
+                    </button>
+
+
+                </form>
+
+
+                <div class="divider">
+                    <span>New to Anna-Vihar?</span>
+                </div>
+
+
+                <button class="secondary-btn">
+                    Create Farmer / FPO Account
+                </button>
+
+
+                <p class="security-note">
+                    🔐 Your account information is securely protected.
+                </p>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <script src="farmer-login.js"></script>
+
+</body>
+
+</html>
